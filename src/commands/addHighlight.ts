@@ -55,6 +55,12 @@ export function registerAddHighlight(context: vscode.ExtensionContext): void {
         color = PRESET_COLORS[choice.label];
       }
 
+      const comment = await vscode.window.showInputBox({
+        prompt: 'Enter an optional comment for this highlight (optional)',
+        placeHolder: 'Enter comment (press Enter to skip)',
+        validateInput: v => v.length > 100 ? 'Comment must be 100 characters or less' : null,
+      });
+
       const startOffset = document.offsetAt(selection.start);
       const endOffset   = document.offsetAt(selection.end);
 
@@ -63,6 +69,7 @@ export function registerAddHighlight(context: vscode.ExtensionContext): void {
         id:    HighlightStorage.generateId(highlights),
         text:  selectedText,
         color,
+        comment: comment?.trim() || undefined,
         position: { start: startOffset, end: endOffset },
       };
       highlights.push(newHighlight);

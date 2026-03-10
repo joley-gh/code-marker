@@ -7,6 +7,8 @@ export interface Highlight {
   text: string;
   /** Background colour, e.g. "#FF000050". */
   color: string;
+  /** Optional comment associated with the highlight. */
+  comment?: string;
   position: {
     start: number; // character offset
     end: number;   // character offset (exclusive)

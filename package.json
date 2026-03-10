@@ -35,6 +35,11 @@
         "command": "code-marker.splitHighlight",
         "title": "Split Highlight",
         "category": "Code Marker"
+      },
+      {
+        "command": "code-marker.editHighlightComment",
+        "title": "Edit Highlight Comment",
+        "category": "Code Marker"
       }
     ],
     "menus": {
@@ -72,6 +77,11 @@
           "command": "code-marker.splitHighlight",
           "when": "editorTextFocus",
           "group": "z_codeMarker@4"
+        },
+        {
+          "command": "code-marker.editHighlightComment",
+          "when": "editorTextFocus",
+          "group": "z_codeMarker@5"
         }
       ]
     }
@@ -83,6 +93,7 @@
     "lint": "eslint src --ext ts",
     "package": "vsce package"
   },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^16.0.0",
     "@types/vscode": "^1.74.0",

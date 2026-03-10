@@ -3,6 +3,7 @@ import { registerAddHighlight }     from './commands/addHighlight';
 import { registerRemoveHighlight }  from './commands/removeHighlight';
 import { registerSplitHighlight }   from './commands/splitHighlight';
 import { registerRefreshHighlights } from './commands/refreshHighlights';
+import { registerEditHighlightComment } from './commands/editHighlightComment';
 import { registerEvents }           from './events';
 import { refreshDecorationsForEditor, disposeDecorations } from './decorations';
 
@@ -14,6 +15,7 @@ export function activate(context: vscode.ExtensionContext): void {
   registerRemoveHighlight(context);
   registerSplitHighlight(context);
   registerRefreshHighlights(context);
+  registerEditHighlightComment(context);
 
   // Register workspace / editor event listeners.
   registerEvents(context);
