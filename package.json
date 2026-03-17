@@ -4,8 +4,13 @@
   "description": "Highlight and manage code sections with ease by coloring them like a text book.",
   "version": "0.0.1",
   "publisher": "jonathan-leyes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joley-gh/code-marker"
+  },
+  "license": "MIT",
   "engines": {
-    "vscode": "^1.74.0"
+    "vscode": "^1.110.0"
   },
   "categories": [
     "Other"
@@ -87,7 +92,8 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "tsc -p ./",
+    "build": "tsc -p ./",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "lint": "eslint src --ext ts",
@@ -95,12 +101,12 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^16.0.0",
-    "@types/vscode": "^1.74.0",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
+    "@types/node": "^25.5.0",
+    "@types/vscode": "^1.110.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/parser": "^8.57.1",
     "@vscode/vsce": "^3.7.1",
-    "eslint": "^8.0.0",
-    "typescript": "^4.7.0"
+    "eslint": "^10.0.3",
+    "typescript": "^5.9.3"
   }
 }
