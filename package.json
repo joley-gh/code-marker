@@ -2,7 +2,7 @@
   "name": "code-marker",
   "displayName": "Code Marker",
   "description": "Highlight and manage code sections with ease by coloring them like a text book.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "jo-ley",
   "repository": {
     "type": "git",
