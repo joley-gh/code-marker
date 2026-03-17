@@ -32,6 +32,7 @@ export function getCommentDecorationType(comment: string, color: string): vscode
       light: {
         after: {
           contentText: ` ${comment}`,
+          fontStyle: 'italic',
           color,
           margin: '0 0 0 4px',
         },
@@ -39,6 +40,7 @@ export function getCommentDecorationType(comment: string, color: string): vscode
       dark: {
         after: {
           contentText: ` ${comment}`,
+          fontStyle: 'italic',
           color,
           margin: '0 0 0 4px',
         },
